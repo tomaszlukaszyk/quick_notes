@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">        
+        <title>Quick Notes</title>
+    </head>
+    <body class="bkgc">
+        <div class="grid">
+            <i id="add" class="material-icons md-48 add">add_circle</i>
+            <h1> Quick Notes</h1>
+            <i id="delete" class="material-icons md-48 delete">delete_forever</i>
+            <div id="container"></div>
+        </div>
+        
+        <template id="note_template">
+            <div class="note">
+                <div class="bar"></div>
+                <input type="text" placeholder="Title">
+                <textarea placeholder="text"></textarea>
+            </div>
+        </template>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
