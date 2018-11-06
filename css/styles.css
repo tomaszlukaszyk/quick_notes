@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 .bkgc {
     background-color: #f3e5f5;
 }
@@ -14,6 +19,7 @@
     grid-template-areas: "add title delete"
                          "notes notes notes";
     place-items: center;
+    height: 100%;
 }
 
 .add {
@@ -36,9 +42,10 @@ h1 {
 
 #container {
     grid-area: notes;
+    place-self: stretch;
     display: flex;
     flex-flow: row wrap;
-    place-self: stretch;
+    align-content: flex-start;
 }
 
 .note {
