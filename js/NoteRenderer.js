@@ -12,6 +12,7 @@ class NoteRenderer {
         for (let i=0; i<storage.notes.length; i++) {
             let noteController = new NoteController(storage.notes[i]);
             let noteView = new NoteView(noteController);
+            noteController.noteView = noteView;
             noteView.element.style.order = i;
             this._container.appendChild(noteView.element);
         }

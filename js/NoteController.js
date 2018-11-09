@@ -4,8 +4,13 @@ import {noteRenderer} from "./NoteRenderer.js"
 export class NoteController {
     constructor(note) {
         this.note = note;
+        this._noteView = null;
         this._grabPointX = null;
         this._grabPointY = null;
+    }
+    
+    set noteView(value) {
+        this._noteView = value;
     }
     
     handleTitleChange(event) {
@@ -24,18 +29,14 @@ export class NoteController {
     }
     
     handleDrag(event) {
-        let noteElement = event.target.parentElement;
         let currentX = event.clientX - this._grabPointX;
         let currentY = event.clientY - this._grabPointY;
 
-        noteElement.style.transform = "translateX(" 
-            + currentX + "px) translateY(" 
-            + currentY + "px)";
+        this._noteView.moveToPosition(currentX, currentY);
     }
     
     handleDragEnd(event) {
-        let noteElement = event.target.parentElement;
-        noteElement.style.transform = null;
+        this._noteView.stopMove();
     
         let dropTarget = document.elementFromPoint(event.clientX, event.clientY);
         

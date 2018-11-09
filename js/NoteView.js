@@ -22,4 +22,12 @@ export class NoteView {
         bar.addEventListener('drag', this._controller.handleDrag.bind(this._controller));
         bar.addEventListener('dragend', this._controller.handleDragEnd.bind(this._controller));
     }
+    
+    moveToPosition(x, y) {
+        this.element.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+    }
+    
+    stopMove() {
+        this.element.style.transform = null;
+    }
 }
