@@ -34,10 +34,12 @@ html, body {
 h1 {
     grid-area: title;
     color: #78909c;
+    cursor: default;
 }
 
 .delete {
     grid-area: delete;
+    cursor: default;
 }
 
 #container {
@@ -60,6 +62,7 @@ h1 {
     width: 100%;
     height: 20px;
     background-color: #e8c400;
+    cursor: move;
 }
 
 input {
