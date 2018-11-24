@@ -9,7 +9,7 @@ html, body {
 
 .material-icons.md-48 { 
     font-size: 48px;
-    color: #78909c;
+    color: #78909b;
 }
 
 .grid {
@@ -40,6 +40,17 @@ h1 {
 .delete {
     grid-area: delete;
     cursor: default;
+}
+
+.help {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.help:hover {
+    color: #889da7;
 }
 
 #container {
@@ -83,4 +94,38 @@ textarea {
     background-color: transparent;
     border: none;
     resize: none;
+}
+
+.glow {
+    box-shadow: 0 0 20px #c35af2;
+}
+
+.red {
+    background-image: radial-gradient(rgba(235, 0, 255, 0.4) 40%, rgba(235, 0, 255, 0) 70%, rgba(235, 0, 255, 0));
+}
+
+.instruction {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    width: 450px;
+    height: 720px;
+    padding-left: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+}
+
+p {
+    color: #78909b;
+}
+
+.close {
+    position: absolute;
+    top 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #889da7;
 }

@@ -21,6 +21,22 @@ class NoteRenderer {
     clearContainer() {
         this._container.innerHTML = "";
     }
+    
+    addGlow() {
+        let notes = document.getElementsByClassName("note");
+        for (let note of notes) {
+            note.classList.add("glow");
+        }
+        document.getElementById("delete").classList.add("red");
+    }
+    
+    removeGlow() {
+        let notes = document.getElementsByClassName("note");
+        for (let note of notes) {
+            note.classList.remove("glow");
+        }
+        document.getElementById("delete").classList.remove("red");
+    }
 }
 
 export let noteRenderer = new NoteRenderer();

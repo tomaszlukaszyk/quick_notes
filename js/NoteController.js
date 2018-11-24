@@ -26,17 +26,18 @@ export class NoteController {
     handleDragStart(event) {
         this._grabPointX = event.clientX;
         this._grabPointY = event.clientY;
+        noteRenderer.addGlow();
     }
     
     handleDrag(event) {
         let currentX = event.clientX - this._grabPointX;
         let currentY = event.clientY - this._grabPointY;
-
         this._noteView.moveToPosition(currentX, currentY);
     }
     
     handleDragEnd(event) {
         this._noteView.stopMove();
+        noteRenderer.removeGlow();
     
         let dropTarget = document.elementFromPoint(event.clientX, event.clientY);
         

@@ -14,3 +14,22 @@ function newNote() {
 }
 
 noteRenderer.render();
+
+let helpButton = document.getElementById("help");
+let instruction = document.getElementById("instruction");
+helpButton.addEventListener("click", toggleInstruction);
+
+function toggleInstruction() {
+    if (instruction.style.display == "none") {
+        instruction.style.display = "block";
+    } else {
+        instruction.style.display = "none";
+    }
+}
+
+let closeButton = document.getElementById("close");
+closeButton.addEventListener("click", closeInstruction);
+
+function closeInstruction() {
+    instruction.style.display = "none";
+}
